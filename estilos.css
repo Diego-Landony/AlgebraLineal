@@ -1,0 +1,154 @@
+/* Estilos generales del cuerpo */
+
+.logo-contenedor {
+  display: flex;
+  align-items: center; /* Alinear verticalmente al centro */
+  justify-content: center; /* Centrar horizontalmente */
+  gap: 10px; /* Espaciado entre el logo y el texto */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+.logo {
+  width: 75px; /* Tamaño del logo */
+}
+
+.logo-contenedor h3 {
+  font-size: 1.3rem;
+  color: #210040;
+  margin: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #f9ecfe,
+    #afb3ff
+  ); /* Fondo degradado original */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más sutil */
+  padding: 20px;
+  max-width: 800px; /* Ancho más compacto */
+  width: 100%;
+  text-align: center;
+  overflow-y: auto; /* Mantener scroll si es necesario */
+}
+
+/* Estilos para los títulos */
+h1 {
+  font-size: 1.8rem; /* Compactar tamaño */
+  color: #210040;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #210040;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los labels y campos del formulario */
+label {
+  font-size: 1.1rem;
+  color: #3b0079;
+}
+
+select,
+input[type="number"] {
+  width: 100%; /* Ajuste a ancho completo */
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+select {
+  background-color: #e0f2f1;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #1c0473;
+  color: white;
+  padding: 10px 0; /* Más compacto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1f023e;
+}
+
+/* Organización de las filas en los formularios */
+.fila {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fila input {
+  flex: 1;
+}
+
+/* Estilos para el área de resultados */
+.resultado {
+  display: none;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #fdf3ff;
+  border-left: 5px solid #210040;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.resultado h3 {
+  color: #210040;
+  font-size: 1.4rem;
+}
+
+.resultado p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.resultado p strong {
+  color: #13002f;
+  font-weight: bold;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .fila {
+    flex-direction: column;
+  }
+
+  button {
+    padding: 12px;
+  }
+}

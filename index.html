@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución de Matrices - Regla de Cramer</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="logo-contenedor">
+        <!-- Logo al inicio -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/15/Escudo_de_la_universidad_Mariano_G%C3%A1lvez_Guatemala.svg"
+          alt="Logo Universidad Mariano Gálvez"
+          class="logo"
+        />
+        <h3>Proyecto final, Álgebra lineal.</h3>
+      </div>
+
+      <h1>
+        Calculadora Sistemas de Ecuaciones <br />
+        con la Regla de Cramer
+      </h1>
+
+      <label for="tipoMatriz">Selecciona el tipo de matriz:</label>
+      <select id="tipoMatriz" onchange="mostrarFormulario()">
+        <option value="">Selecciona una opción</option>
+        <option value="2x2">2x2</option>
+        <option value="3x3">3x3</option>
+      </select>
+
+      <!-- Formulario para 2x2 -->
+      <div id="formulario2x2" class="formulario" style="display: none">
+        <h2>Ingresar ecuaciones para 2x2</h2>
+        <div class="fila">
+          <input type="number" id="a1_2x2" placeholder="a1 (x)" />
+          <input type="number" id="a2_2x2" placeholder="a2 (y)" />
+          <input type="number" id="c1_2x2" placeholder="c1 (independiente)" />
+        </div>
+        <div class="fila">
+          <input type="number" id="b1_2x2" placeholder="b1 (x)" />
+          <input type="number" id="b2_2x2" placeholder="b2 (y)" />
+          <input type="number" id="c2_2x2" placeholder="c2 (independiente)" />
+        </div>
+        <button onclick="resolverSistema2x2()">Resolver 2x2</button>
+      </div>
+
+      <!-- Formulario para 3x3 -->
+      <div id="formulario3x3" class="formulario" style="display: none">
+        <h2>Ingresar ecuaciones para 3x3</h2>
+        <div class="fila">
+          <input type="number" id="a1_3x3" placeholder="a1 (x)" />
+          <input type="number" id="a2_3x3" placeholder="a2 (y)" />
+          <input type="number" id="a3_3x3" placeholder="a3 (z)" />
+          <input type="number" id="c1_3x3" placeholder="c1 (independiente)" />
+        </div>
+        <div class="fila">
+          <input type="number" id="b1_3x3" placeholder="b1 (x)" />
+          <input type="number" id="b2_3x3" placeholder="b2 (y)" />
+          <input type="number" id="b3_3x3" placeholder="b3 (z)" />
+          <input type="number" id="c2_3x3" placeholder="c2 (independiente)" />
+        </div>
+        <div class="fila">
+          <input type="number" id="d1_3x3" placeholder="d1 (x)" />
+          <input type="number" id="d2_3x3" placeholder="d2 (y)" />
+          <input type="number" id="d3_3x3" placeholder="d3 (z)" />
+          <input type="number" id="c3_3x3" placeholder="c3 (independiente)" />
+        </div>
+        <button onclick="resolverSistema3x3()">Resolver 3x3</button>
+      </div>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
